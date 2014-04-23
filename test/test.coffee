@@ -13,18 +13,23 @@ describe '社内勉強会のスケジュール', ->
   entrants = []
   attendees = {}
 
-  $('th').each (i, th) ->
-    dates[i] = $(th).text()
+  before (done) ->
+    $('th').each (i, th) ->
+      dates[i] = $(th).text()
+      return
 
-  $('li').each (i, li) ->
-    entrants.push $(li).text()
+    $('li').each (i, li) ->
+      entrants.push $(li).text()
+      return
 
-  $('tr').each (i, tr) ->
-    user = null
-    $(tr).find('td').each (i, td) ->
-      return user = $(td).text() if i is 0
-      attendees[user] or= {}
-      attendees[user][dates[i]] = /[\u25CB|\u25EF|o]/gi.test $(td).text()
+    $('tr').each (i, tr) ->
+      user = null
+      $(tr).find('td').each (i, td) ->
+        return user = $(td).text() if i is 0
+        attendees[user] or= {}
+        attendees[user][dates[i]] = /[\u25CB|\u25EF|o]/gi.test $(td).text()
+        return
+    done()
 
   it 'should 全員参加可能な日がある', ->
     attendee_accept = {}
