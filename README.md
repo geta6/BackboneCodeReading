@@ -7,6 +7,7 @@ Backbone Code Reading
 ----
 
 - @geta6
+- @walf443
 
 日程
 ----
@@ -14,4 +15,5 @@ Backbone Code Reading
 |          |04/28|04/29|04/30|05/01|05/02|
 |----------|-----|-----|-----|-----|-----|
 |@geta6    |o    |o    |o    |o    |o    |
+|@walf443  |x    |x    |o    |o    |o    |
 
