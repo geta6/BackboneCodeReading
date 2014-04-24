@@ -1,7 +1,7 @@
 process.env.NODE_ENV = 'test'
 
 fs = require 'fs'
-assert = require 'should'
+assert = require 'assert'
 marked = require 'marked'
 cheerio = require 'cheerio'
 
