@@ -1,7 +1,7 @@
 NODE = node
 MOCHA = ./node_modules/.bin/mocha
 
-REPORTER = dot
+REPORTER = spec
 MOCHA_OPTS = --colors --growl --check-leaks
 
 test: test-unit
